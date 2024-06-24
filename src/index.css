@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+    font-family: 'Product Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.search-button {
+    display: inline-block;
+    background-color: #323232; /* black background color */
+    color: white; /* white text color */
+    border: none;
+    padding: 25px 70px; /* padding inside the button */
+    font-size: 16px; /* font size */
+    border-radius: 40px 100px 40px 100px; /* more rounded corners on top left and bottom right */
+    cursor: pointer; /* cursor changes to pointer on hover */
+    transform: skewX(-10deg); /* tilt the button */
+    transition: background-color 0.3s; /* smooth transition for hover effect */
+}
+
+.search-button:hover {
+    background-color: #000; /* slightly lighter black on hover */
+}
+
+.button-wrapper {
+    display: inline-block;
+    transform: skewX(10deg); /* reverse tilt to keep the text straight */
+}
+
+.input-field {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Space between input and button */
+    width: 620px; /* Adjust based on your needs */
+    height: 65px; /* Adjust based on your needs */
+    border: 2px solid #ccc; /* Adds a border around the input */
+    border-radius: 40px 100px 40px 100px; /* Rounded corners */
+    outline: none; /* Removes focus outline */
+    box-sizing: border-box; /* Ensures padding doesn't add to total width */
+    padding-left: 30px; /* Padding for text inside the input */
+    font-size: 16px; /* Font size */
+    color: #333; /* Text color */
+    background-color: #fff; /* Background color */
+    cursor: text; /* Cursor changes to text on hover */
+    transition: border-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.input-field:hover {
+    border-color: #999; /* Slightly darker border on hover */
+    outline: none;
+
+}
+
+/* Ensure the button does not affect the input field's appearance */
+.input-field:focus {
+    outline: none;
+}
