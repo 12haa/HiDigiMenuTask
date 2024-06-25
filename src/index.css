@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 * {
-    font-family: 'Product Sans', sans-serif;
+    font-family: 'Product Sans', sans-serif;;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
 }
 
 .search-button {
@@ -66,6 +67,7 @@
     overflow: hidden;
     position: relative;
 }
+
 .image-wrapper::after {
     content: '';
     position: absolute;
@@ -87,22 +89,4 @@
 /* Adjustments for hover state if needed */
 .image-wrapper:hover {
     cursor: pointer /* Slightly lighter black on hover */
-}
-.gradient-overlay {
-    position: fixed; /* Fixed position to cover the whole viewport */
-    top: 0;
-    left: 0;
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    background: linear-gradient(to bottom right, #fff2e4, #fff); /* Gradient from top left to bottom right */
-    z-index: 9; /* High z-index to ensure it stays on top */
-}
-.gradient-button-overlay{
-    position: fixed; /* Fixed position to cover the whole viewport */
-    top: 0;
-    left: 0;
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    background: linear-gradient(to top left, #fff2e4, #fff); /* Gradient from top left to bottom right */
-    z-index: 11;
 }
