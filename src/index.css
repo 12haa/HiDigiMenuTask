@@ -31,30 +31,60 @@
 }
 
 .input-field {
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Vertically center items */
-    justify-content: space-between; /* Space between input and button */
-    width: 620px; /* Adjust based on your needs */
-    height: 65px; /* Adjust based on your needs */
-    border: 2px solid #ccc; /* Adds a border around the input */
-    border-radius: 40px 100px 40px 100px; /* Rounded corners */
-    outline: none; /* Removes focus outline */
-    box-sizing: border-box; /* Ensures padding doesn't add to total width */
-    padding-left: 30px; /* Padding for text inside the input */
-    font-size: 16px; /* Font size */
-    color: #333; /* Text color */
-    background-color: #fff; /* Background color */
-    cursor: text; /* Cursor changes to text on hover */
-    transition: border-color 0.3s; /* Smooth transition for hover effect */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 620px;
+    height: 75px;
+    border: 2px solid #f0f0f0;
+    border-radius: 40px 100px 40px 100px;
+    outline: none;
+    box-sizing: border-box;
+    padding-left: 30px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    cursor: text;
+    transition: border-color 0.3s;
 }
 
 .input-field:hover {
-    border-color: #999; /* Slightly darker border on hover */
+    border-color: #999;
     outline: none;
-
 }
 
-/* Ensure the button does not affect the input field's appearance */
+
 .input-field:focus {
     outline: none;
+}
+
+.image-wrapper {
+    display: flex;
+    width: 350px; /* Adjust based on your needs */
+    height: 200px; /* Adjust based on your needs */
+    border-radius: 45px 100px 45px 100px;
+    overflow: hidden;
+    position: relative;
+}
+.image-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Black background with 60% opacity */
+    border-radius: inherit; /* Inherits the border-radius of the parent */
+}
+
+/* Styles for the image */
+.image-wrapper img {
+    object-fit: cover;
+    width: 100%; /* Make the image fill the wrapper */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Adjustments for hover state if needed */
+.image-wrapper:hover {
+    cursor: pointer /* Slightly lighter black on hover */
 }

@@ -1,4 +1,6 @@
-import {iconsArray} from "./lib/icons.ts";
+import {foodCategoryData, iconsArray} from "./lib/icons.ts";
+import FoodCategoryCard from "./components/FoodCategoryCard.tsx";
+import foodCategoryCard from "./components/FoodCategoryCard.tsx";
 
 const App = () => {
     return (
@@ -9,7 +11,7 @@ const App = () => {
             <div
                 className="min-w-[95%] min-h-[95%] rounded-3xl border-1 border-rose-500 bg-white flex flex-col gap-26 items-center z-1">
                 {/*Header Wrapper Div*/}
-                <div className="flex w-[92%] items-center justify-between mt-20 ">
+                <div className="flex w-[92%] items-center justify-between mt-10 ">
                     {/*Left items*/}
                     <div className="flex items-center  gap-20 ">
                         {/*Logo And Name*/}
@@ -57,7 +59,7 @@ const App = () => {
                 </div>
 
                 {/*Header wrapper div Ends*/}
-                <div className="flex flex-col w-[92%] gap-5 mt-14">
+                <div className="flex flex-col w-[92%] gap-5 mt-8">
                     <div className="flex gap-2 items-center">
                         <div className="flex gap-2 items-center">
                             <img src="/src/assets/icons/locationIcon.svg" alt="LocationIcon"/>
@@ -67,11 +69,47 @@ const App = () => {
                         <p className="text-[19px]">New York, <span className="text-[#1bcf92]">Left Side Blue Door</span>
                         </p>
                     </div>
-
+                    {/*Search Input */}
                     <div className="input-field">
-                        <input type="text" placeholder="Search..."/>
+                        <input type="text" placeholder="Search..." className="focus-visible:outline-none  w-full"/>
                         <div className="button-wrapper ">
                             <button className="search-button w-[180px]">Search</button>
+                        </div>
+                    </div>
+                    {/*Search Input Ends */}
+                    {/* Food Categories*/}
+                    <div className="flex flex-col mt-10 ml-3 gap-3">
+                        <h2 className="text-[19px] leading-3 text-[#bdbdbd]">Product Category</h2>
+                        <div className="flex gap-5 mt-3">
+                            {foodCategoryData.map(item => {
+                                return (
+                                    <FoodCategoryCard iconPath={item.iconPath} altName={item.altName} name={item.name}
+                                                      key={item.id}/>
+                                )
+                            })}
+                        </div>
+                    </div>
+                    {/* Food Categories Ends*/}
+
+                    {/*    Recently Ordered Section*/}
+                    <div className="flex flex-col mt-10 ml-3 gap-3">
+                        <h2 className="text-[19px] leading-3 text-[#bdbdbd]">Recently Ordered</h2>
+                        <div className="flex gap-5 mt-3">
+                            {/*Data Coming From Ap*/}
+                            {[0, 1].map(() => {
+                                return <div className="image-wrapper">
+                                    <img src="/src/assets/icons/recentlyImage.svg" alt="Description of Image"/>
+                                    <div
+                                        className="z-20 absolute  px-4 py-4 left-10 items-center flex bottom-3  gap-4">
+                                        <img src="/src/assets/icons/kingBurgurIcon.svg"
+                                             alt="KingBurgur"/>
+                                        <div className="flex flex-col items-start">
+                                            <h2 className="text-white text-xl whitespace-nowrap">King Burger</h2>
+                                            <p className="text-white">Rate 8/10</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            })}
                         </div>
                     </div>
                 </div>
