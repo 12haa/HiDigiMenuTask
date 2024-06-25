@@ -5,10 +5,11 @@ const App = () => {
     return (
         <main
             className="w-full relative h-screen  flex items-center justify-center   ">
+            {/*Top Left Gradient*/}
             <span
                 className="absolute top-0  left-0 bg-gradient-to-br from-[#ffebd8] via-slate-50 to-gray-50   z-10 w-full h-full "/>
             <div className="absolute z-30 h-full right-0">
-                <img src="/src/assets/icons/bg2.svg" className="w-full h-[90%]"/>
+                <img src="/src/assets/icons/bg2.svg" className="w-full h-[90%]" alt="mainBackgroundImage"/>
             </div>
             <div className="absolute right-16 bottom-32 flex items-center gap-6 z-30">
                 <p className="text-xl font-light cursor-pointer">Applications</p>
@@ -25,9 +26,9 @@ const App = () => {
                 <img src="/src/assets/icons/jumper.svg" className="z-1 w-full h-[80%]" alt="thumbsUp"/>
             </div>
             <div
-                className="min-w-[95%] min-h-[95%] rounded-3xl  bg-white flex flex-col gap-26 items-center   z-20 ">
+                className="min-w-[96%] min-h-[93%] rounded-3xl  bg-white flex flex-col gap-26 items-center   z-20 ">
                 {/*Header Wrapper Div*/}
-                <div className="flex w-[92%] items-center justify-between mt-10 z-40 ">
+                <div className="flex w-[95%] items-center justify-between mt-10 z-40 ">
                     {/*Left items*/}
                     <div className="flex items-center  gap-20 ">
                         {/*Logo And Name*/}
@@ -40,7 +41,7 @@ const App = () => {
                             </div>
                         </div>
                         {/* Logo And Name End   */}
-                        {/*  ContanctUs & category*/}
+                        {/*  Contact Us & category*/}
                         <div className="flex items-center gap-10">
                             <div className="flex gap-3 hover:cursor-pointer">
                                 <img src="/src/assets/icons/menuIcon.svg" alt="MenuIcon"/>
