@@ -60,7 +60,7 @@
 
 .image-wrapper {
     display: flex;
-    width: 350px; /* Adjust based on your needs */
+    width: 400px; /* Adjust based on your needs */
     height: 200px; /* Adjust based on your needs */
     border-radius: 45px 100px 45px 100px;
     overflow: hidden;

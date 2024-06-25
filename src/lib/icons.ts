@@ -26,7 +26,7 @@ export const foodCategoryData = [
         id: 2,
         iconPath: "/src/assets/icons/hamburgerIcon.svg",
         altName: "hamburgerIcon",
-        name: "Hamburger"
+        name: "burger"
     }, {
         id: 3,
         iconPath: "/src/assets/icons/sandwichIcon.svg",

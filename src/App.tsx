@@ -1,12 +1,22 @@
 import {foodCategoryData, iconsArray} from "./lib/icons.ts";
 import FoodCategoryCard from "./components/FoodCategoryCard.tsx";
-import foodCategoryCard from "./components/FoodCategoryCard.tsx";
+
 
 const App = () => {
     return (
         <main className="w-full  h-screen border-4 border-amber-300 flex items-center justify-center bg-amber-100">
-            <div className="absolute h-full  right-0">
+            <div className="absolute  h-full  right-0">
                 <img src="/src/assets/icons/bg2.svg" className="z-1 w-full h-[90%]"/>
+                <div className="absolute bottom-0">ss</div>
+            </div>
+            <div className="absolute h-full z-10  right-28 top-[160px]">
+                <img src="/src/assets/icons/burger2.svg" className="z-1 w-full h-[65%]"/>
+            </div>
+            <div className="absolute h-full right-0 top-[130px]">
+                <img src="/src/assets/icons/burger1.svg" className="z-1 w-full h-[50%]"/>
+            </div>
+            <div className="absolute h-full right-0 top-[130px] z-20">
+                <img src="/src/assets/icons/jumper.svg" className="z-1 w-full h-[80%]"/>
             </div>
             <div
                 className="min-w-[95%] min-h-[95%] rounded-3xl border-1 border-rose-500 bg-white flex flex-col gap-26 items-center z-1">
@@ -102,10 +112,10 @@ const App = () => {
                                     <div
                                         className="z-20 absolute  px-4 py-4 left-10 items-center flex bottom-3  gap-4">
                                         <img src="/src/assets/icons/kingBurgurIcon.svg"
-                                             alt="KingBurgur"/>
+                                             alt="KingBurgur" className="w-40"/>
                                         <div className="flex flex-col items-start">
-                                            <h2 className="text-white text-xl whitespace-nowrap">King Burger</h2>
-                                            <p className="text-white">Rate 8/10</p>
+                                            <h2 className="text-white text-2xl whitespace-nowrap">King Burger</h2>
+                                            <p className="text-white text-xl font-light">Rate 8/10</p>
                                         </div>
                                     </div>
                                 </div>
